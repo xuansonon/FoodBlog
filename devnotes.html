@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myBlog">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/theme.css" rel="stylesheet"/>
+    <title>I'm Bloggn</title>
+  </head>
+  <body>
+
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-logo">
+            <h1 class="navbar-brand">Hello, I'm the developer!</h1>
+          </div>
+        </div>
+      </nav>
+
+          <div class="container devnotes">
+            <p>
+              I hope you've enjoyed going through my demo blog! Let's get introductions over: I'm Xuanson. I am still studying Computer Science and I am an aspiring web developer!
+              I really could go on more and more, but you can find all of that on my <a href="www.xuansonon.com">website</a>, where you can find more of my other projects and works.
+              Anyway, I'm sure you're not reading the developer's notes for the sake of learning about me personally, so below I explain this project.
+            </p>
+            <p>
+              This food blog project was originally not intended for continuation or maintence. It wasn't even supposed to be food theme (but everyone likes food), but I had to find
+              a topic in which can reflect the design of the site. Of course, it could be used as a blog about economics, sports, etc. It was orignally designed to be a universally themed
+              blog. The only reason for this site to be food-theme was because of the images, backgrounds and the topics that were chosen.
+            </p>
+            <p>
+              Let's get to the building blocks of the site: I built the design and structure purely in HTML and CSS. Alongside these markup languages, I also used AngularJS to power the blogging
+              side of things (or to be <em>really</em> specific, the back-end). AngularJS allows users to dynamically power their site using the Model View Controller (MVC) approach. The MVC
+              approach follows the design principles in which functionality are sperate to design. If it weren't for AngularJS, this site would not be a blog site at all. Of course, I could've
+              used PHP and MySQL to get posts, but AngularJS is what makes this site dynamic.
+            </p>
+            <p>
+              I went for a simple, elegant and minilistic design. The home page consists of three sections, the navigation, the content and the footer. These three sections are at the maximum
+              width of 960 pixels (the go-to resolution for a lot of sites). Similarly to this page, the sections have a white background, and behind it is a simple wallpaper that is positioned
+              statically on the view. I felt that using a white background for the whole site, especially with a small content area (of 960 pixels) would not be appealing. I also found a wallpaper
+              that was not distracting and yet appealing and enough to constrast the white background of the contents.
+            </p>
+            <p class="coming-soon">
+              More notes coming soon as I prepare it and proof read for publishing...
+            </p>
+            <p>
+              I would really like to take the time now to say a very big thank you to a few mentionable names. I've used 3 author's food posts to populate the site with posts, and two artists
+              photos I've used for my wallpapers and feature images:
+            </p>
+            <ul class="thank-you-list">
+              <li>Tieghan of <em>Half Baked Harvest</em>: <a href="http://www.halfbakedharvest.com">http://www.halfbakedharvest.com</a></li>
+              <li>Jeanine and Jack of <em>Love and Lemons</em>: <a href="https://www.loveandlemons.com/">https://www.loveandlemons.com/</a></li>
+              <li>Natalie and Holly of <em>The Modern Proper</em>: <a href="https://www.loveandlemons.com/">https://www.loveandlemons.com/</a></li>
+            </ul>
+            <p class="coming-soon">Once again, thank you for reading through this, and I hope you've enjoyed browsing my work!</p>
+          </div>
+          <div class="footer">
+            <div class="container">
+              <p>If you'd like to see more you can find me on: <a href="www.xuansonon.com/">My Website</a> | <a href="www.github.com/xuanson2016">GitHub</a> | <a href="#">LinkedIn</a>
+              <p>Copyright © 2017 · All Rights Reserved · Design by Xuanson On</p>
+            </div>
+          </div>
+
+        </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-blog.js"></script>
+  </body>
+</html>

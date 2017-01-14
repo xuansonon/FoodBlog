@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myBlog">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/theme.css" rel="stylesheet"/>
+    <title>I'm Bloggn</title>
+  </head>
+  <body>
+
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-logo">
+            <h1 class="navbar-brand">I'm Bloggn</h1>
+          </div>
+          <div class="navbar-nav">
+            <ul class="nav-links">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="archived.html">Archive</a></li>
+              <li><a href="#">Contact Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+          <div class="container" data-ng-controller="HomeBlogsController">
+            <div class="featured-images">
+              <img src="resources/images/fbg.jpg"/>
+            </div>
+            <div class="mainframe">
+              <section class="blog-entries">
+                <div class="title">
+                  <h1>My Latest Posts</h1>
+                </div>
+                <div class="all-entries">
+                  <div class="text-entry" data-ng-repeat="post in posts | limitTo: 5 | filter: query as results">
+                    <div class="image-holder"><a href="#"><img src="{{post.p_imageurl}}"></img></a></div>
+                    <div class="blog-content">
+                      <h1 class="title"><a href="#">{{post.p_title}}</a></h1>
+                      <p class="subtitle">{{post.p_timestamp}} <span class="comment-sym">+</span> 23</p>
+                      <p class="post">{{post.p_content | limitTo: 150}}... <a href="#">Read more</a></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="about-me">
+                <h2>About Me</h2>
+                <div class="profile-picture">
+                  <div class="pic"></div>
+                </div>
+                <div class="my-description">
+                  <p>
+                    But I must explain to you how all this mistaken idea of denouncing
+                    pleasure and praising pain was born and I will give you a complete
+                    account of the system, and expound the actual teachings of the great
+                    explorer of the truth, the master-builder of human happiness. No one
+                    rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+                    but because those who do not know how to pursue pleasure rationally
+                    encounter consequences that are extremely painful.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="container">
+              <ul class="socials">
+                <li><a href="https://www.facebook.com/">M</a></li>
+                <li><a href="https://www.twitter.com/">N</a></li>
+                <li><a href="https://www.instagram.com/">P</a></li>
+              </ul>
+              <p>Copyright © 2017 · All Rights Reserved · Design by Xuanson On | <a href="devnotes.html">Read the Developer Notes</a></p>
+            </div>
+          </div>
+
+        </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-blog.js"></script>
+  </body>
+</html>

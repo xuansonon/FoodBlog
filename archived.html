@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myBlog">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/theme.css" rel="stylesheet"/>
+    <title>I'm Bloggn: Archived Posts</title>
+  </head>
+  <body>
+
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-logo">
+            <h1 class="navbar-brand">I'm Bloggn</h1>
+          </div>
+          <div class="navbar-nav">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="#">Archive</a></li>
+              <li><a href="#">Contact Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+          <div class="container" data-ng-controller="ArchivedBlogController">
+            <div class="mainframe">
+              <div class="archived-posts">
+                <h2>Archived Posts</h2>
+                <div class="all-archived">
+                  <div class="archive-entry" data-ng-repeat="post in posts">
+                    <h3><a href="post/{{post.p_id}}">{{post.p_title}}</a></h3>
+                    <p class="subtitle">{{post.p_timestamp}} <span class="comment-sym">+</span> 23</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="container">
+              <ul class="socials">
+                <li><a href="https://www.facebook.com/">M</a></li>
+                <li><a href="https://www.twitter.com/">N</a></li>
+                <li><a href="https://www.instagram.com/">P</a></li>
+              </ul>
+              <p>Copyright © 2017 · All Rights Reserved · Design by Xuanson On | <a href="devnotes.html">Read the Developer Notes</a></p>
+            </div>
+          </div>
+
+        </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-blog.js"></script>
+  </body>
+</html>
